@@ -63,10 +63,10 @@ Go to this generated folder, the project layout should look like:
 │   ├── cli.py
 │   └── my_package.py
 ├── pyproject.toml
-├── setup.cfg
-└── tests
-    ├── __init__.py
-    └── test_my_package.py
+├── tests
+│   ├── __init__.py
+│   └── test_my_package.py
+└── tox.ini
 
 ```
 

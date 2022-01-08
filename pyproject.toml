@@ -4,7 +4,7 @@ name = "cookiecutter-pypackage"
 version = "1.1.1"
 description = "Cookiecutter template for a Python package"
 license = "BSD-3-Clause"
-authors = ["Xie Wei <ampedee@gmail.com>"]
+authors = ["Altaf Ali <altaf@firecrest.io>"]
 readme = "README.md"
 repository = "https://github.com/waynerv/cookiecutter-pypackage"
 documentation = "https://waynerv.github.io/cookiecutter-pypackage/"
@@ -17,7 +17,7 @@ include = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.6.*"
+python = ">=3.7.*"
 cookiecutter = "1.7.2"
 
 pytest = {version = "^6.2.3", optional=true}
@@ -46,7 +46,7 @@ dev = [
 ]
 
 [tool.black]
-line-length = 88
+line-length = 79
 include = '\.pyi?$'
 exclude = '''
 /(

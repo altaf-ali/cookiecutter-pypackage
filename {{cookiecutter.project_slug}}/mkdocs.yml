@@ -51,7 +51,7 @@ plugins:
       lang: en
   - mkdocstrings:
       watch:
-        - {{ cookiecutter.pkg_nameq }}
+        - {{ cookiecutter.pkg_name }}
 extra:
   social:
     - icon: fontawesome/brands/twitter
