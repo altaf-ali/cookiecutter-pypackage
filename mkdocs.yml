@@ -22,6 +22,7 @@ theme:
     - navigation.indexes
     - navigation.instant
     - navigation.tabs.sticky
+    - navigation.tracking
 
 markdown_extensions:
   - pymdownx.highlight:
