@@ -22,7 +22,7 @@ This tool will create Python project with the following features:
 * Check static type with [Mypy](http://mypy-lang.org/) (optional)
 * [Pre-commit hooks](https://pre-commit.com/): Formatting/linting anytime when commit your code
 * [Mkdocstrings](https://mkdocstrings.github.io/): Auto API doc generation
-* Command line interface using [Click](https://click.palletsprojects.com/en/8.0.x/) or [Typer](https://typer.tiangolo.com)(optional)
+* Command line interface using [Click](https://click.palletsprojects.com/en/8.0.x/) or [Typer](https://typer.tiangolo.com) (optional)
 * [bump2version](https://github.com/c4urself/bump2version): Pre-configured version bumping with a single command
 * Continuous Integration/Deployment by [GitHub actions](https://github.com/features/actions), includes:
     - publish dev build/official release to TestPyPI/PyPI automatically when CI success
