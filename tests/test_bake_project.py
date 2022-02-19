@@ -116,6 +116,7 @@ def test_bake_with_defaults(cookies):
         assert 'python_boilerplate' in found_toplevel_files
         assert 'setup.cfg' in found_toplevel_files
         assert 'tests' in found_toplevel_files
+        assert 'tox.ini' in found_toplevel_files
 
         mkdocs_yml = os.path.join(result._project_dir, "mkdocs.yml")
         with open(mkdocs_yml, "r") as f:
@@ -187,7 +188,7 @@ def test_docstrings_style(cookies):
     with bake_in_temp_dir(cookies, extra_context={'docstrings_style': 'google'}) as result:
         assert result.project.isdir()
         # Test lint rule contains google style
-        flake8_conf_file_apth = result.project.join("setup.cfg")
+        flake8_conf_file_apth = result.project.join("tox.ini")
         lines = flake8_conf_file_apth.readlines()
         assert "docstring-convention = google" in ''.join(lines)
 
