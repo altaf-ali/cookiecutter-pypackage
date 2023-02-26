@@ -13,28 +13,29 @@ repos:
       - id: check-yaml
         args: [ --unsafe ]
   - repo: https://github.com/pre-commit/mirrors-isort
-    rev: v5.8.0
+    rev: v5.10.1
     hooks:
       - id: isort
         args: [ "--filter-files" ]
   - repo: https://github.com/ambv/black
-    rev: 21.5b1
+    rev: 22.8.0
     hooks:
       - id: black
-        language_version: python3.8
+        language_version: python3.10
   - repo: https://github.com/pycqa/flake8
-    rev: 3.9.2
+    rev: 5.0.4
     hooks:
       - id: flake8
         additional_dependencies: [ flake8-typing-imports==1.10.0 ]
   {%- if cookiecutter.use_mypy == 'y' %}
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v0.901
+    rev: v0.971
     hooks:
       - id: mypy
         exclude: tests/
         {% if cookiecutter.command_line_interface|lower in ['click', 'typer'] -%}
         additional_dependencies:
           - types-click
+          - types-PyYAML
         {%- endif %}
   {%- endif %}
