@@ -94,7 +94,7 @@ You should still be in the folder named as `project_slug`, which containing the
 Install the new project's local development requirements with `poetry install`:
 
 ``` bash
-poetry install -E doc -E dev -E test
+poetry install --with doc,dev,test
 poetry run tox
 ```
 
