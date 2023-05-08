@@ -216,7 +216,8 @@ def test_docstrings_style(cookies):
 
 @pytest.mark.parametrize("args", [
     ({'command_line_interface': "No command-line interface"}, False),
-    ({'command_line_interface': 'click'}, True),
+    ({'command_line_interface': 'Click'}, True),
+    ({'command_line_interface': 'Typer'}, True),
 ])
 def test_bake_with_no_console_script(cookies, args):
     context, is_present = args
@@ -231,7 +232,7 @@ def test_bake_with_no_console_script(cookies, args):
 
 
 def test_bake_with_console_script_cli(cookies):
-    context = {'command_line_interface': 'click'}
+    context = {'command_line_interface': 'Click'}
     result = cookies.bake(extra_context=context)
     project_path, project_slug, project_dir = project_info(result)
     module_path = os.path.join(project_dir, 'cli.py')
